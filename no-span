@@ -1,0 +1,12 @@
+import re
+
+def remove_span_tags_from_text(text):
+    # Use regular expression to remove <span> tags
+    cleaned_text = re.sub(r'<span.*?>|</span>', '', text)
+    return cleaned_text
+
+# Example usage:
+input_text = input("Enter plain text: ")
+result = remove_span_tags_from_text(input_text)
+print("Output after removing <span> tags:")
+print(result)
